@@ -1,0 +1,6 @@
+/data/mysql/*
+/logs/apache/*
+/logs/mysql/*
+/www/**
+.DS_Store
+/.idea
