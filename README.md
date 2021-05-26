@@ -2,7 +2,7 @@
 # Docker LAMP
 Yeah, another Docker LAMP repository.
 
-It's based on [docker-compose-lamp](https://github.com/sprintcube/docker-compose-lamp).
+It's based on [docker-compose-lamp](https://github.com/sprintcube/docker-compose-lamp). Use the original one, if you need advanced solution.
 
 I customized, removed and simplified parts that I don't need right now.
 
