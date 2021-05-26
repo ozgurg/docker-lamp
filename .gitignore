@@ -4,5 +4,6 @@
 /www/*
 !/www/.gitkeep
 !/www/phpinfo.php
+!/www/pdo.php
 .DS_Store
 /.idea
