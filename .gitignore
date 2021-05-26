@@ -3,5 +3,6 @@
 /logs/mysql/*
 /www/*
 !/www/.gitkeep
+!/www/phpinfo.php
 .DS_Store
 /.idea
