@@ -1,6 +1,7 @@
 /data/mysql/*
 /logs/apache/*
 /logs/mysql/*
-/www/**
+/www/*
+!/www/.gitkeep
 .DS_Store
 /.idea
