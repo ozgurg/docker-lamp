@@ -1,9 +1,2 @@
-/data/mysql/*
-/logs/apache/*
-/logs/mysql/*
-/www/*
-!/www/.gitkeep
-!/www/phpinfo.php
-!/www/pdo.php
 .DS_Store
 /.idea
