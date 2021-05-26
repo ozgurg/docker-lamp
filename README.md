@@ -6,7 +6,7 @@ It's based on [docker-compose-lamp](https://github.com/sprintcube/docker-compose
 
 I customized, removed and simplified parts that I don't need right now.
 
-# Installation
+## Installation
 
     git clone https://github.com/ozgurg/docker-lamp.git
     cd docker-lamp
