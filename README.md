@@ -12,7 +12,7 @@ I customized, removed and simplified parts that I don't need right now. It's def
     cd docker-lamp
     docker-compose up -d
 
-Webserver: http://localhost - [/pdo.php](http://localhost/pdo.php) & [/phpinfo.php](http://localhost/phpinfo.php)
+Webserver: http://localhost:8081 - [/pdo.php](http://localhost:8081/pdo.php) & [/phpinfo.php](http://localhost:8081/phpinfo.php)
 
 phpMyAdmin: http://localhost:8001
 
