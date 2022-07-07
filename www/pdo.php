@@ -1,6 +1,6 @@
 <?php
 $host = "database";
-$db = "myDockerDatabase";
+$db = "docker";
 $user = "docker";
 $password = "docker";
 $charset = "utf8mb4";

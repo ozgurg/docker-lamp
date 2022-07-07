@@ -4,7 +4,7 @@ Yeah, another Docker LAMP repository.
 
 It's based on [docker-compose-lamp](https://github.com/sprintcube/docker-compose-lamp). Use the original one, if you need advanced solution.
 
-I customized, removed and simplified parts that I don't need right now.
+I customized, removed and simplified parts that I don't need right now. It's definitely not production ready and not tested for it.
 
 ## Installation
 
@@ -12,7 +12,7 @@ I customized, removed and simplified parts that I don't need right now.
     cd docker-lamp
     docker-compose up -d
 
-Webserver: http://localhost - [/pdo.php](http://localhost/pdo.php) & [/phpinfo.php](http://localhost/phpinfo.php)
+Webserver: http://localhost:8081 - [/pdo.php](http://localhost:8081/pdo.php) & [/phpinfo.php](http://localhost:8081/phpinfo.php)
 
 phpMyAdmin: http://localhost:8001
 

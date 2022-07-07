@@ -1,2 +1,8 @@
 .DS_Store
 /.idea
+
+data/*
+!/data/.gitkeep
+
+logs/*
+!/logs/.gitkeep

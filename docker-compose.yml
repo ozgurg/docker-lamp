@@ -1,9 +1,9 @@
-version: "3"
+version: "3.8"
 
 services:
   www:
     build:
-      context: ./bin/php8
+      context: ./bin/php
     container_name: "${PROJECT_NAME}-www"
     restart: "always"
     ports:
@@ -18,7 +18,7 @@ services:
 
   database:
     build:
-      context: "./bin/mysql8"
+      context: "./bin/mysql"
     container_name: "${PROJECT_NAME}-database"
     restart: "always"
     platform: linux/x86_64
@@ -30,13 +30,13 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
-      - ${MYSQL_LOG_DIR}:/var/log/mysql
-      - ${MYSQL_DATA_DIR-./data/mysql}:/var/lib/mysql
+      - ${MYSQL_DATA_DIR}:/var/lib/mysql
+    command: --sql_mode="STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"
 
   phpmyadmin:
     container_name: "${PROJECT_NAME}-pma"
     restart: "always"
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin/phpmyadmin:5.1.3@sha256:1d3f6ec798a9faa201ada6678797f399202928e677dfccbb698ef0b511c798b0
     links:
       - database
     ports:
