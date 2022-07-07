@@ -1,4 +1,4 @@
-FROM php:8.1.0-apache
+FROM php:8.1.6-apache@sha256:17ab11ea84038d3daa3bb945656fb14648f3a1dbf5f17d1c8458473563e80f5a
 
 # Update
 RUN apt-get -y update --fix-missing && \
