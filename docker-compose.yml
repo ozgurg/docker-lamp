@@ -3,7 +3,7 @@ version: "3"
 services:
   www:
     build:
-      context: ./bin/php8
+      context: ./bin/php
     container_name: "${PROJECT_NAME}-www"
     restart: "always"
     ports:
@@ -18,7 +18,7 @@ services:
 
   database:
     build:
-      context: "./bin/mysql8"
+      context: "./bin/mysql"
     container_name: "${PROJECT_NAME}-database"
     restart: "always"
     platform: linux/x86_64
