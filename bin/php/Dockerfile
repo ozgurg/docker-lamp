@@ -1,26 +1,29 @@
 FROM php:8.1.6-apache@sha256:17ab11ea84038d3daa3bb945656fb14648f3a1dbf5f17d1c8458473563e80f5a
 
-# Update
 RUN apt-get -y update --fix-missing && \
     apt-get upgrade -y && \
-    apt-get --no-install-recommends install -y apt-utils && \
+    apt-get --no-install-recommends install -y apt-utils zlib1g-dev libpng-dev libzip-dev libwebp-dev libmagickwand-dev libjpeg62-turbo-dev && \
     rm -rf /var/lib/apt/lists/*
 
-# Install MySQL
-RUN docker-php-ext-install mysqli pdo_mysql
+RUN apt-get update && apt-get install -y \
+    && pecl install imagick \
+	&& docker-php-ext-enable imagick
 
-# Install Composer
-RUN curl -sS https://getcomposer.org/installer | php \
-    && mv composer.phar /usr/local/bin/composer
+RUN docker-php-ext-install mysqli pdo_mysql zip exif
 
-# Enable Apache modules
+RUN docker-php-ext-configure gd --with-webp --with-jpeg=/usr/include/ &&\
+    docker-php-ext-install gd
+
+RUN curl -sS https://getcomposer.org/installer | php && \
+    mv composer.phar /usr/local/bin/composer && \
+    composer clearcache
+
 RUN a2enmod rewrite headers
 
-# Install Git, Unzip and Zip
-RUN apt-get update && apt-get install -y git unzip zip
-
-# Set workdir
 WORKDIR /var/www/html
 
-# Cleanup
-RUN rm -rf /usr/src/*
+# Clear cache
+RUN apt-get clean && \
+    apt-get autoclean && \
+    apt-get autoremove -y && \
+    rm -rf /usr/src/*
