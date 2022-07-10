@@ -22,7 +22,7 @@ RUN a2enmod rewrite headers
 
 WORKDIR /var/www/html
 
-# Clear cache
+# Cleanup
 RUN apt-get clean && \
     apt-get autoclean && \
     apt-get autoremove -y && \
