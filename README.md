@@ -4,7 +4,9 @@ Yeah, another Docker LAMP repository.
 
 It's based on [docker-compose-lamp](https://github.com/sprintcube/docker-compose-lamp). Use the original one, if you need advanced solution.
 
-I customized, removed and simplified parts that I don't need right now. It's definitely not production ready and not tested for it.
+I customized, removed and simplified parts that I don't need right now.
+
+It's not production ready and not tested for it.
 
 ## Installation
 
