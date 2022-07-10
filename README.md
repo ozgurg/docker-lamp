@@ -9,10 +9,11 @@ I customized, removed and simplified parts that I don't need right now.
 It's not production ready and not tested for it.
 
 ## Installation
-
-    git clone https://github.com/ozgurg/docker-lamp.git
-    cd docker-lamp
-    docker-compose up -d
+``` sh
+git clone https://github.com/ozgurg/docker-lamp.git
+cd docker-lamp
+docker-compose up -d
+```
 
 Webserver: http://localhost:8081 - [/pdo.php](http://localhost:8081/pdo.php) & [/phpinfo.php](http://localhost:8081/phpinfo.php)
 
