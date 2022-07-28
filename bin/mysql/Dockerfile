@@ -1,3 +1,3 @@
-FROM mysql:8.0.29@sha256:dc7738aabdbd169a07e473ced756abfc6f873ce607e9437914071c90e0a0f51f
+FROM mysql:8.0.30@sha256:13b312e01e8c6eca35c0ff251c261ca2e52994b2a71890539ad31dce8978fa15
 
 RUN echo "default-authentication-plugin=mysql_native_password" >> /etc/mysql/my.cnf
